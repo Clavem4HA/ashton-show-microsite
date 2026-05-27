@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dealer Bond Trivia — Ashton Agency</title>
+  <meta name="description" content="How well do you know your state's bonding requirements? 8 questions, 3× drawing entries for completing the game.">
+  <meta name="theme-color" content="#1a2332">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="https://bonds.ashtonagency.com/wp-content/uploads/2025/05/Ashton-Favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lora:wght@400;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<nav class="bottom-nav">
+  <a href="index.html" class="nav-tab">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+    </svg>
+    Home
+  </a>
+  <a href="reference.html" class="nav-tab">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+    </svg>
+    Bond Finder
+  </a>
+  <a href="articles.html" class="nav-tab">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+    </svg>
+    Articles
+  </a>
+  <a href="game.html" class="nav-tab active">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+    </svg>
+    Game
+  </a>
+</nav>
+
+<div class="page-wrapper" style="background:var(--color-surface-alt);">
+
+  <div class="page-brand-header">
+    <div class="container">
+      <div class="page-brand-row">
+        <div class="page-brand-logo">
+          <img src="https://bonds.ashtonagency.com/wp-content/uploads/2025/05/Ashton-Favicon.png"
+               alt="Ashton Agency" onerror="this.style.opacity='0'">
+        </div>
+        <div>
+          <div class="page-brand-title">Dealer Bond Trivia</div>
+          <div class="page-brand-sub">8 questions · 2–3 min · earn 3× drawing entries</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Intro screen -->
+  <div id="screen-intro" class="game-screen" style="background:var(--color-surface);">
+    <div class="game-intro">
+      <div class="game-intro-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+        </svg>
+      </div>
+      <h1 class="game-intro-title">Dealer Bond Trivia</h1>
+      <p class="game-intro-desc">8 questions on Southeast bonding requirements. About 2–3 minutes. Each answer comes with a real explanation.</p>
+      <div class="game-prize-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+        </svg>
+        Finish the game → earn 3× drawing entries
+      </div>
+      <button class="btn btn-primary btn-full btn-lg" id="start-btn">Start trivia</button>
+      <p style="font-size:0.75rem;color:var(--color-text-muted);margin-top:12px;">No purchase necessary. Drawing at end of show.</p>
+    </div>
+  </div>
+
+  <!-- Question screen -->
+  <div id="screen-question" class="game-screen">
+    <div class="game-progress" style="background:var(--color-surface);border-bottom:1px solid var(--color-border);padding-bottom:12px;">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+      <div class="progress-label" id="progress-label">Question 1 of 8</div>
+    </div>
+    <div style="background:var(--color-surface);">
+      <div class="question-card">
+        <div class="question-text" id="question-text">Loading…</div>
+        <div class="answer-options" id="answer-options"></div>
+      </div>
+      <div class="explanation-box" id="explanation"></div>
+      <div style="padding:0 16px 20px;">
+        <button class="btn btn-primary btn-full" id="next-btn" style="display:none;">Next question</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- End screen -->
+  <div id="screen-end" class="game-screen" style="background:var(--color-surface);">
+    <div class="game-end" id="drawing">
+      <div class="score-ring">
+        <div class="score-number" id="score-number">0</div>
+        <div class="score-denom" id="score-denom">/ 8</div>
+      </div>
+      <h2 class="game-end-title" id="end-title">Well played.</h2>
+      <p class="game-end-sub" id="end-sub">Here's your score.</p>
+      <div class="entries-badge" id="entries-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
+        </svg>
+        You earned 3× drawing entries!
+      </div>
+
+      <div class="entry-form">
+        <div class="entry-form-title">Enter the drawing</div>
+        <p class="entry-form-sub">10 × $25 Amazon gift cards. Leave your info and we'll log your 3× entries.</p>
+        <form id="entry-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="entry-name">Full name *</label>
+              <input class="form-input" type="text" id="entry-name" required autocomplete="name" placeholder="Jane Smith">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="entry-phone">Phone *</label>
+              <input class="form-input" type="tel" id="entry-phone" required autocomplete="tel" placeholder="(407) 555-0100">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="entry-email">Email *</label>
+            <input class="form-input" type="email" id="entry-email" required autocomplete="email" placeholder="jane@dealership.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="entry-company">Dealership / company</label>
+            <input class="form-input" type="text" id="entry-company" autocomplete="organization" placeholder="Smith Auto Group">
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top:4px;">Claim my 3× entries</button>
+          <p style="font-size:0.7rem;color:var(--color-text-muted);margin-top:8px;text-align:center;">Your info stays with Ashton. No spam, ever.</p>
+        </form>
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">🎉</div>
+          <div class="form-success-title">You're entered!</div>
+          <p class="form-success-sub">3× entries logged. Good luck — come find us at the booth.</p>
+        </div>
+      </div>
+
+      <button class="btn btn-ghost btn-full" id="play-again-btn" style="margin-top:12px;">Play again</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="install-banner" id="install-banner">
+  <div class="install-banner-text">
+    <div class="install-banner-title">Add to your home screen</div>
+    <div class="install-banner-sub">Keep the bond reference tool after the show</div>
+  </div>
+  <button class="btn btn-primary btn-sm" id="install-btn">Install</button>
+  <button class="install-banner-close" id="install-dismiss" aria-label="Dismiss">×</button>
+</div>
+
+<script src="js/app.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+{
+  "nationalAvgBond": 35000,
+  "nationalAvgRange": [10000, 75000],
+  "states": [
+    {
+      "code": "AL",
+      "name": "Alabama",
+      "dealerTypes": [
+        { "type": "New / Used / Wholesale Dealer", "bondAmount": 50000 }
+      ],
+      "garageLiabilityMin": 75000,
+      "renewalCycle": "annual",
+      "renewalMonth": 10,
+      "renewalDay": 31,
+      "regulatorName": "Alabama Dept. of Revenue — Motor Vehicle Division",
+      "regulatorPhone": "(334) 242-9000",
+      "regulatorUrl": "https://www.revenue.alabama.gov/motor-vehicle/motor-vehicle-dealers/",
+      "proTip": "Make sure your license, bond, and insurance all match up correctly. State minimums don't always reflect what your actual operation — or your lenders — may require."
+    },
+    {
+      "code": "FL",
+      "name": "Florida",
+      "dealerTypes": [
+        { "type": "Independent Used Dealer", "bondAmount": 25000, "renewalMonth": 4, "renewalDay": 30 },
+        { "type": "Franchise Dealer",         "bondAmount": 25000, "renewalMonth": 12, "renewalDay": 31 },
+        { "type": "RV Dealer",                "bondAmount": 15000, "renewalMonth": 9,  "renewalDay": 30, "note": "$10k–$20k based on number of licensed locations" },
+        { "type": "MH Dealer",                "bondAmount": 25000, "renewalMonth": 9,  "renewalDay": 30 }
+      ],
+      "garageLiabilityMin": 25000,
+      "garageLiabilityNote": "Plus $10,000 PIP required. Transporter plate holders: minimum liability increases to $100,000.",
+      "renewalCycle": "annual-variable",
+      "regulatorName": "Florida DHSMV — Dealer License Division",
+      "regulatorPhone": "(850) 617-2000",
+      "regulatorUrl": "https://www.flhsmv.gov/motor-vehicles-tags-titles/dealers/",
+      "proTip": "Watch for entity and address mismatches between Sunbiz, your DMV license, and your insurance — they must match exactly. If you carry transporter plates, your minimum liability requirement jumps to $100,000."
+    },
+    {
+      "code": "LA",
+      "name": "Louisiana",
+      "dealerTypes": [
+        { "type": "New Motor Vehicle Dealer",  "bondAmount": 50000, "commission": "LMVC",  "renewalNote": "Oct 31 / Apr 30" },
+        { "type": "Used Motor Vehicle Dealer", "bondAmount": 50000, "commission": "LUMVC", "renewalNote": "Dec 31 / district-assigned" }
+      ],
+      "garageLiabilityMin": 50000,
+      "renewalCycle": "district-based",
+      "regulatorName": "LMVC (new dealers) / LUMVC (used dealers)",
+      "regulatorPhone": "(225) 925-4044",
+      "regulatorUrl": "https://www.lumvc.la.gov/",
+      "proTip": "Louisiana has TWO separate commissions — the LMVC handles new franchise dealers and the LUMVC handles used dealers. Renewal dates also vary by district. Know which office handles your renewal before you file anything."
+    },
+    {
+      "code": "MS",
+      "name": "Mississippi",
+      "dealerTypes": [
+        { "type": "Used Dealer",      "bondAmount": 15000 },
+        { "type": "Wholesale Dealer", "bondAmount": 25000 }
+      ],
+      "garageLiabilityMin": 75000,
+      "renewalCycle": "annual",
+      "renewalMonth": 12,
+      "renewalDay": 31,
+      "regulatorName": "Mississippi Motor Vehicle Commission",
+      "regulatorPhone": "(601) 923-7000",
+      "regulatorUrl": "https://www.dor.ms.gov/Business/Pages/Motor-Vehicle.aspx",
+      "proTip": "Multi-location dealers regularly assume one license covers every lot — it usually doesn't. Wholesalers can also run into compliance issues when their bond and license no longer reflect how they actually operate day to day."
+    },
+    {
+      "code": "TN",
+      "name": "Tennessee",
+      "dealerTypes": [
+        { "type": "Used Dealer / RV Dealer", "bondAmount": 50000 }
+      ],
+      "garageLiabilityMin": 300000,
+      "renewalCycle": "biennial",
+      "regulatorName": "Tennessee Motor Vehicle Commission",
+      "regulatorPhone": "(615) 741-3101",
+      "regulatorUrl": "https://www.tn.gov/commerce/regboards/tmc.html",
+      "proTip": "Tennessee renews on a biennial (every 2 years) cycle — not annual. Shared office or lot setups can create compliance issues if they don't meet commission facility standards, which are enforced during inspection and renewal."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Ashton Agency — Show Edition",
+  "short_name": "Ashton",
+  "description": "Dealer bond & insurance reference. AL, FL, LA, MS, TN. Fast turnaround. Real people.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#1a2332",
+  "theme_color": "#1a2332",
+  "icons": [
+    {
+      "src": "https://bonds.ashtonagency.com/wp-content/uploads/2025/05/Ashton-Favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://bonds.ashtonagency.com/wp-content/uploads/2025/05/Ashton-Favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "utilities"],
+  "prefer_related_applications": false
+}

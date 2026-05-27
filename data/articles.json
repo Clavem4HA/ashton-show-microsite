@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "title": "The 5 Questions We Answer Most at Every Dealer Show",
+      "excerpt": "Credit scores, second locations, renewal deadlines — here are the questions that come up at every booth, with the answers we actually give.",
+      "date": "SEIADA 2025",
+      "tag": "Show Edition",
+      "url": "article-show-2025.html",
+      "image": "assets/ashton-5-questions.jpg",
+      "external": false
+    },
+    {
+      "id": 2,
+      "title": "Used Car Dealer Bond Updates for 2026: FL, TX, GA, and OH",
+      "excerpt": "Florida's still at $25k. Ohio just jumped to $75k. Here's how four states compare — and why the gap matters if you're expanding.",
+      "date": "April 2026",
+      "tag": "Multi-State",
+      "url": "article-bond-comparison-2026.html",
+      "image": "assets/used-car-dealer-bond-updates-2026-fl-tx-ga-oh-hero.webp",
+      "external": false
+    },
+    {
+      "id": 3,
+      "title": "Florida Insurance & Bond Rules in 2026: What Dealers Need to Watch",
+      "excerpt": "Florida's $25k bond hasn't changed — but the compliance environment around it has. Here's what's actually different this year.",
+      "date": "March 2026",
+      "tag": "Florida",
+      "url": "article-florida-2026.html",
+      "image": "assets/florida-insurance-bond-rules-2026-hero.webp",
+      "external": false
+    }
+  ]
+}
