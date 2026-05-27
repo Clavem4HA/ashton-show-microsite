@@ -43,6 +43,8 @@
       ],
       "garageLiabilityMin": 50000,
       "renewalCycle": "district-based",
+      "countdownMonth": 10,
+      "countdownDay": 31,
       "regulatorName": "LMVC (new dealers) / LUMVC (used dealers)",
       "regulatorPhone": "(225) 925-4044",
       "regulatorUrl": "https://www.lumvc.la.gov/",

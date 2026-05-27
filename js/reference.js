@@ -94,10 +94,10 @@ function renderCountdownSection(state) {
     `;
   }
 
-  // District-based (Louisiana)
+  // District-based (Louisiana) — show info + countdown to Oct 31
   if (state.renewalCycle === 'district-based') {
     return `
-      <div class="countdown-section" style="margin:20px 16px 0;border-radius:12px;">
+      <div class="countdown-section" style="margin:20px 16px 0;border-radius:12px;" id="countdown-${state.code}">
         <div class="countdown-label">Renewal varies by dealer type &amp; district</div>
         <div style="display:flex;flex-direction:column;gap:8px;margin-top:8px;">
           <div style="font-size:0.875rem;color:rgba(255,255,255,0.8);">
@@ -107,7 +107,34 @@ function renderCountdownSection(state) {
             <span style="color:var(--color-primary);font-weight:700;">Used dealers (LUMVC)</span> — Dec 31 or district-assigned
           </div>
         </div>
-        <div class="countdown-renewal-date" style="margin-top:10px;">Confirm your district assignment with Ashton before filing.</div>
+        <div class="countdown-label" id="countdown-label-${state.code}" style="margin-top:16px;">Next LMVC deadline</div>
+        <div class="countdown-display">
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-months-${state.code}">--</span>
+            <span class="countdown-unit-label">months</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-days-${state.code}">--</span>
+            <span class="countdown-unit-label">days</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-hrs-${state.code}">--</span>
+            <span class="countdown-unit-label">hrs</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-min-${state.code}">--</span>
+            <span class="countdown-unit-label">min</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span class="countdown-value" id="cd-sec-${state.code}">--</span>
+            <span class="countdown-unit-label">sec</span>
+          </div>
+        </div>
+        <div class="countdown-renewal-date" id="countdown-date-${state.code}">Confirm your district assignment with Ashton before filing.</div>
       </div>
     `;
   }
@@ -257,6 +284,12 @@ function getNextDeadline(state) {
     return { target, label: `Renewal due ${monthName(state.renewalMonth)} ${state.renewalDay}` };
   }
 
+  if (state.countdownMonth) {
+    let target = new Date(now.getFullYear(), state.countdownMonth - 1, state.countdownDay, 23, 59, 59);
+    if (target <= now) target = new Date(now.getFullYear() + 1, state.countdownMonth - 1, state.countdownDay, 23, 59, 59);
+    return { target, label: `LMVC renewal due ${monthName(state.countdownMonth)} ${state.countdownDay}` };
+  }
+
   if (state.renewalCycle === 'annual-variable') {
     const seen = new Set();
     const deadlines = state.dealerTypes
@@ -280,7 +313,7 @@ function getNextDeadline(state) {
 }
 
 function startCountdown(state) {
-  if (state.renewalCycle === 'biennial' || state.renewalCycle === 'district-based') return;
+  if (state.renewalCycle === 'biennial') return;
 
   const code = state.code;
   if (countdownIntervals[code]) return;
