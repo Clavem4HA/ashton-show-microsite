@@ -54,23 +54,12 @@ function renewalMetaText(state) {
 }
 
 function renderBondTable(state) {
-  const hasVariableRenewal = state.dealerTypes.some(d => d.renewalMonth);
-  const hasCommission     = state.dealerTypes.some(d => d.commission);
-  const hasRenewalNote    = state.dealerTypes.some(d => d.renewalNote);
-
-  const showRenewalCol  = hasVariableRenewal;
-  const showCommCol     = hasCommission;
-  const showRenoteCol   = hasRenewalNote;
-
   return `
     <table class="bond-table">
       <thead>
         <tr>
           <th>Dealer type</th>
           <th style="text-align:right">Bond required</th>
-          ${showRenewalCol  ? '<th>Renewal</th>' : ''}
-          ${showCommCol     ? '<th>Commission</th>' : ''}
-          ${showRenoteCol   ? '<th>Renewal</th>' : ''}
         </tr>
       </thead>
       <tbody>
@@ -78,14 +67,14 @@ function renderBondTable(state) {
           <tr>
             <td>
               <div>${d.type}</div>
+              ${d.commission ? `<div class="bond-note">${d.commission}</div>` : ''}
               ${d.note ? `<div class="bond-note">${d.note}</div>` : ''}
             </td>
             <td style="text-align:right">
               <div class="bond-amount">${formatCurrency(d.bondAmount)}</div>
+              ${d.renewalMonth ? `<div class="bond-note" style="text-align:right">${monthName(d.renewalMonth)} ${d.renewalDay}</div>` : ''}
+              ${d.renewalNote ? `<div class="bond-note" style="text-align:right">${d.renewalNote}</div>` : ''}
             </td>
-            ${showRenewalCol ? `<td style="font-size:0.8rem;color:var(--color-text-muted);">${d.renewalMonth ? `${monthName(d.renewalMonth)} ${d.renewalDay}` : '—'}</td>` : ''}
-            ${showCommCol    ? `<td style="font-size:0.8rem;color:var(--color-text-muted);">${d.commission || '—'}</td>` : ''}
-            ${showRenoteCol  ? `<td style="font-size:0.8rem;color:var(--color-text-muted);">${d.renewalNote || '—'}</td>` : ''}
           </tr>
         `).join('')}
       </tbody>
