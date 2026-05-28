@@ -1,11 +1,13 @@
-const CACHE = 'ashton-show-v5';
+const CACHE = 'ashton-show-v6';
 
 const PRECACHE = [
   '/',
-  '/index.html',
-  '/reference.html',
-  '/articles.html',
-  '/game.html',
+  '/reference',
+  '/articles',
+  '/game',
+  '/article-show-2025',
+  '/article-bond-comparison-2026',
+  '/article-florida-2026',
   '/css/tokens.css',
   '/css/main.css',
   '/js/app.js',
