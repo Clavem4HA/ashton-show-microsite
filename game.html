@@ -101,6 +101,21 @@
     </div>
   </div>
 
+  <!-- Bonus screen -->
+  <div id="screen-bonus" class="game-screen" style="background:var(--color-surface);">
+    <div class="bonus-header">
+      <div class="bonus-eyebrow" id="bonus-round-label">Bonus Round 1 of 2</div>
+      <div class="bonus-title">Number Match</div>
+      <p class="bonus-desc">Find a matching pair. Flip a card to peek — flip it again to hide (free).</p>
+      <div class="bonus-peeks-row"><span id="bonus-flips-count">4</span> peeks remaining</div>
+    </div>
+    <div class="bonus-grid" id="bonus-grid"></div>
+    <div class="bonus-feedback" id="bonus-feedback"></div>
+    <div style="padding:0 16px 20px;">
+      <button class="btn btn-primary btn-full" id="bonus-continue-btn" style="display:none;">Continue</button>
+    </div>
+  </div>
+
   <!-- End screen -->
   <div id="screen-end" class="game-screen" style="background:var(--color-surface);">
     <div class="game-end" id="drawing">
@@ -110,46 +125,11 @@
       </div>
       <h2 class="game-end-title" id="end-title">Well played.</h2>
       <p class="game-end-sub" id="end-sub">Here's your score.</p>
-      <div class="entries-badge" id="entries-badge">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" style="width:16px;height:16px;">
-          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/>
-        </svg>
-        You earned 3× drawing entries!
+      <div class="booth-cta">
+        <div class="booth-cta-title">Come find us at the booth</div>
+        <div class="booth-cta-sub">We'd love to answer your questions in person.</div>
       </div>
-
-      <div class="entry-form">
-        <div class="entry-form-title">Enter the drawing</div>
-        <p class="entry-form-sub">10 × $25 Amazon gift cards. Leave your info and we'll log your 3× entries.</p>
-        <form id="entry-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label" for="entry-name">Full name *</label>
-              <input class="form-input" type="text" id="entry-name" required autocomplete="name" placeholder="Jane Smith">
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="entry-phone">Phone *</label>
-              <input class="form-input" type="tel" id="entry-phone" required autocomplete="tel" placeholder="(407) 555-0100">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="entry-email">Email *</label>
-            <input class="form-input" type="email" id="entry-email" required autocomplete="email" placeholder="jane@dealership.com">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="entry-company">Dealership / company</label>
-            <input class="form-input" type="text" id="entry-company" autocomplete="organization" placeholder="Smith Auto Group">
-          </div>
-          <button type="submit" class="btn btn-primary btn-full" style="margin-top:4px;">Claim my 3× entries</button>
-          <p style="font-size:0.7rem;color:var(--color-text-muted);margin-top:8px;text-align:center;">Your info stays with Ashton. No spam, ever.</p>
-        </form>
-        <div class="form-success" id="form-success">
-          <div class="form-success-icon">🎉</div>
-          <div class="form-success-title">You're entered!</div>
-          <p class="form-success-sub">3× entries logged. Good luck — come find us at the booth.</p>
-        </div>
-      </div>
-
-      <button class="btn btn-ghost btn-full" id="play-again-btn" style="margin-top:12px;">Play again</button>
+      <button class="btn btn-ghost btn-full" id="play-again-btn" style="margin-top:16px;">Play again</button>
     </div>
   </div>
 

@@ -1,4 +1,4 @@
-const CACHE = 'ashton-show-v4';
+const CACHE = 'ashton-show-v5';
 
 const PRECACHE = [
   '/',
