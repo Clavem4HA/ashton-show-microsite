@@ -1589,6 +1589,98 @@ p:last-child { margin-bottom: 0; }
 .text-muted { color: var(--color-text-muted); }
 .text-primary { color: var(--color-primary); }
 .text-small { font-size: 0.85rem; }
+
+/* ----------------------------------------------------------------
+   Contact modal + floating action button
+   ---------------------------------------------------------------- */
+.contact-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.contact-modal-overlay[hidden] { display: none; }
+
+.contact-modal-sheet {
+  background: var(--color-surface);
+  width: 100%;
+  max-width: var(--max-width);
+  max-height: 90vh;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  animation: sheet-up 0.22s ease;
+}
+
+@keyframes sheet-up {
+  from { transform: translateY(100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.contact-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  background: var(--color-surface);
+  z-index: 1;
+}
+
+.contact-modal-title {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.contact-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.contact-modal-body {
+  padding: 16px;
+}
+
+.contact-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+  z-index: 180;
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-full);
+  padding: 10px 18px 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(29,158,117,0.4);
+  transition: background var(--transition), transform var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+.contact-fab:active {
+  background: var(--color-primary-dark);
+  transform: scale(0.97);
+}
 .text-xs { font-size: 0.75rem; }
 .font-serif { font-family: var(--font-serif); }
 .mt-16 { margin-top: var(--space-16); }

@@ -92,5 +92,25 @@
 
 <script src="js/app.js"></script>
 <script src="js/reference.js"></script>
+
+<!-- Contact modal -->
+<div id="contact-modal" class="contact-modal-overlay" role="dialog" aria-modal="true" aria-label="Connect with Ashton" hidden>
+  <div class="contact-modal-sheet">
+    <div class="contact-modal-header">
+      <span class="contact-modal-title">Connect with Ashton</span>
+      <button class="contact-modal-close" id="contact-modal-close" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <div class="contact-modal-body"></div>
+  </div>
+</div>
+
+<!-- Floating connect button -->
+<button class="contact-fab" id="contact-fab-btn" aria-label="Connect with Ashton">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+  <span>Connect</span>
+</button>
+<script src="js/contact-modal.js"></script>
 </body>
 </html>

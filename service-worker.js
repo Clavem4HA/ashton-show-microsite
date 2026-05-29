@@ -1,4 +1,4 @@
-const CACHE = 'ashton-show-v6';
+const CACHE = 'ashton-show-v8';
 
 const PRECACHE = [
   '/',
@@ -13,6 +13,7 @@ const PRECACHE = [
   '/js/app.js',
   '/js/reference.js',
   '/js/game.js',
+  '/js/contact-modal.js',
   '/data/states.json',
   '/data/articles.json',
   '/data/trivia.json',
