@@ -33,14 +33,17 @@ module.exports = async function handler(req, res) {
     if (contact[k] === '') delete contact[k];
   });
 
+  const LOCATION_ID = 'FQd58sTNzZ8jUMdFYMWK';
+
   try {
-    const ghlRes = await fetch('https://rest.gohighlevel.com/v1/contacts/', {
+    const ghlRes = await fetch('https://services.leadconnectorhq.com/contacts/upsert', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${apiKey}`,
         'Content-Type': 'application/json',
+        Version: '2021-07-28',
       },
-      body: JSON.stringify(contact),
+      body: JSON.stringify({ ...contact, locationId: LOCATION_ID }),
     });
 
     if (!ghlRes.ok) {
