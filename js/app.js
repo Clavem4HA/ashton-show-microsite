@@ -1,5 +1,5 @@
-// Show name — update this for NIADA: "NIADA 2025"
-const SHOW_NAME = 'SEIADA 2026';
+// Show name — update for next show (e.g. "SEIADA 2027")
+const SHOW_NAME = 'NIADA 2026';
 
 // Update all show name placeholders in DOM
 document.querySelectorAll('[data-show-name]').forEach(el => {
