@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Partners — Ashton Agency Show Edition</title>
+  <meta name="description" content="Meet ASC Warranty and Floorplan Xpress — the partners Ashton Agency is proud to be in the room with at NIADA 2026.">
+  <meta name="theme-color" content="#1a2332">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="https://bonds.ashtonagency.com/wp-content/uploads/2025/05/Ashton-Favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Lora:wght@400;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/main.css">
+  <style>
+    .partners-hero {
+      background: linear-gradient(160deg, var(--color-surface-dark) 0%, #1f2a3e 100%);
+      padding: 40px 20px 36px;
+      text-align: center;
+      border-bottom: 1px solid var(--color-border);
+    }
+    .partners-eyebrow {
+      display: inline-block;
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--color-primary); margin-bottom: 14px;
+    }
+    .partners-hero h1 {
+      font-family: var(--font-sans); font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 700; color: var(--color-text-inverse);
+      line-height: 1.2; letter-spacing: -0.5px; margin-bottom: 14px;
+    }
+    .partners-hero h1 em { color: var(--color-primary); font-style: normal; }
+    .partners-hero p {
+      font-size: 0.9rem; color: rgba(255,255,255,0.6);
+      max-width: 520px; margin: 0 auto; line-height: 1.75;
+    }
+
+    .stat-row {
+      background: var(--color-surface-dark); border-bottom: 1px solid var(--color-border);
+      padding: 20px 20px; display: flex; justify-content: center; gap: 0;
+    }
+    .stat-row-item { flex: 1; max-width: 160px; text-align: center; position: relative; padding: 0 12px; }
+    .stat-row-item:not(:last-child)::after { content:''; position:absolute; right:0; top:10%; bottom:10%; width:1px; background: var(--color-border); }
+    .stat-row-num { font-size: 1.5rem; font-weight: 700; color: var(--color-primary); display: block; line-height: 1; margin-bottom: 4px; }
+    .stat-row-lbl { font-size: 0.65rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.8px; line-height: 1.4; display: block; }
+
+    .partner-section { padding: 28px 20px 8px; max-width: 680px; margin: 0 auto; }
+    .partner-section-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--color-primary); margin-bottom: 6px; }
+    .partner-section-heading { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 700; color: var(--color-text); margin-bottom: 4px; }
+    .partner-section-sub { font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 20px; line-height: 1.65; }
+
+    .partner-cards { display: flex; flex-direction: column; gap: 16px; padding: 0 20px 24px; max-width: 680px; margin: 0 auto; }
+    .partner-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 24px 20px 20px;
+      box-shadow: var(--shadow-card);
+      display: flex; flex-direction: column;
+    }
+    .partner-card.asc   { border-top: 3px solid #c8102e; }
+    .partner-card.fx    { border-top: 3px solid #B01E3A; }
+
+    .card-year { font-size: 0.68rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+    .partner-card.asc .card-year { color: #c8102e; }
+    .partner-card.fx  .card-year { color: #B01E3A; }
+
+    .card-name { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 700; color: var(--color-text); margin-bottom: 10px; }
+    .card-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
+    .card-tag { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; padding: 2px 8px; border-radius: 3px; }
+    .partner-card.asc .card-tag { background: rgba(200,16,46,0.08); color: #c0233a; border: 1px solid rgba(200,16,46,0.15); }
+    .partner-card.fx  .card-tag { background: rgba(176,30,58,0.08); color: #B01E3A; border: 1px solid rgba(176,30,58,0.15); }
+
+    .card-pitch { font-size: 0.84rem; color: var(--color-text-muted); line-height: 1.7; margin-bottom: 14px; flex: 1; }
+    .card-booth { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--color-text-light); padding: 10px 0; border-top: 1px solid var(--color-border); margin-bottom: 14px; line-height: 1.65; }
+    .card-booth strong { color: var(--color-text-muted); }
+    .card-cta { display: inline-block; padding: 9px 16px; border-radius: var(--radius); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; text-decoration: none; transition: opacity .15s; align-self: flex-start; }
+    .partner-card.asc .card-cta { background: rgba(200,16,46,0.08); color: #c0233a; border: 1px solid rgba(200,16,46,0.2); }
+    .partner-card.asc .card-cta:hover { opacity: 0.8; }
+    .partner-card.fx  .card-cta { background: rgba(176,30,58,0.08); color: #B01E3A; border: 1px solid rgba(176,30,58,0.2); }
+    .partner-card.fx  .card-cta:hover { opacity: 0.8; }
+
+    /* FORM */
+    .form-section { background: var(--color-surface-alt); border-top: 1px solid var(--color-border); padding: 28px 20px 32px; }
+    .form-inner { max-width: 680px; margin: 0 auto; }
+    .form-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--color-primary); margin-bottom: 6px; display: block; }
+    .form-heading { font-family: var(--font-sans); font-size: 1.1rem; font-weight: 700; color: var(--color-text); margin-bottom: 4px; }
+    .form-sub { font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 20px; line-height: 1.65; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+    .form-field {
+      background: var(--color-surface); border: 1px solid var(--color-border);
+      border-radius: var(--radius); padding: 10px 12px; color: var(--color-text);
+      font-size: 0.88rem; font-family: var(--font-sans); width: 100%;
+      transition: border-color var(--transition);
+    }
+    .form-field:focus { outline: none; border-color: var(--color-primary); }
+    .form-field::placeholder { color: var(--color-text-light); }
+    .form-field option { background: var(--color-surface); color: var(--color-text); }
+    .form-full { margin-bottom: 10px; }
+    /* honeypot */
+    .hp-field { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
+    .btn-submit {
+      background: var(--color-primary); color: #fff; border: none;
+      padding: 12px 24px; border-radius: var(--radius); font-size: 0.88rem;
+      font-weight: 700; cursor: pointer; transition: background var(--transition); margin-top: 4px;
+      font-family: var(--font-sans);
+    }
+    .btn-submit:hover { background: var(--color-primary-dark); }
+    .btn-submit:disabled { opacity: 0.6; cursor: default; }
+    .form-success { display: none; background: var(--color-primary-light); border: 1px solid var(--color-primary-muted); border-radius: var(--radius); padding: 14px 16px; margin-top: 14px; }
+    .form-success p { font-size: 0.84rem; color: var(--color-text); line-height: 1.6; }
+
+    /* DISCLAIMER */
+    .disclaimer-section { padding: 20px 20px 28px; max-width: 680px; margin: 0 auto; border-top: 1px solid var(--color-border); }
+    .disclaimer-section p { font-size: 0.7rem; color: var(--color-text-light); line-height: 1.8; }
+
+    @media (max-width: 480px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="bottom-nav">
+  <a href="/" class="nav-tab">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+    </svg>
+    Home
+  </a>
+  <a href="/reference" class="nav-tab">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+    </svg>
+    Bond Finder
+  </a>
+  <a href="/articles" class="nav-tab">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0118 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/>
+    </svg>
+    Articles
+  </a>
+  <a href="/game" class="nav-tab">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/>
+    </svg>
+    Game
+  </a>
+  <a href="/partners" class="nav-tab active">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/>
+    </svg>
+    Partners
+  </a>
+</nav>
+
+<div class="page-wrapper">
+
+  <!-- HERO -->
+  <section class="partners-hero">
+    <div class="partners-eyebrow">NIADA 2026 · Denver</div>
+    <h1>Companies Ashton is proud to <em>be in the room with.</em></h1>
+    <p>Ashton Agency has been getting independent dealers bonded since 1968. We're at NIADA because we show up. The two companies below operate the same way.</p>
+  </section>
+
+  <!-- STAT ROW -->
+  <div class="stat-row">
+    <div class="stat-row-item">
+      <span class="stat-row-num">150</span>
+      <span class="stat-row-lbl">Years combined &mdash; Ashton, ASC &amp; FX</span>
+    </div>
+    <div class="stat-row-item">
+      <span class="stat-row-num">3</span>
+      <span class="stat-row-lbl">Independent companies, one standard</span>
+    </div>
+    <div class="stat-row-item">
+      <span class="stat-row-num">All 3</span>
+      <span class="stat-row-lbl">In Denver this week</span>
+    </div>
+  </div>
+
+  <!-- SECTION HEADER -->
+  <div class="partner-section">
+    <div class="partner-section-label">At NIADA 2026 · Denver</div>
+    <h2 class="partner-section-heading">Two more companies worth your time.</h2>
+    <p class="partner-section-sub">Both have been serving independent dealers for decades. Both pick up the phone. Both are here in Denver.</p>
+  </div>
+
+  <!-- PARTNER CARDS -->
+  <div class="partner-cards">
+
+    <!-- ASC WARRANTY -->
+    <div class="partner-card asc">
+      <div class="card-year">Since 1986 &nbsp;·&nbsp; 40 Years</div>
+      <div class="card-name">ASC Warranty</div>
+      <div class="card-tags">
+        <span class="card-tag">Vehicle Service Contracts</span>
+        <span class="card-tag">F&amp;I Products</span>
+        <span class="card-tag">Three-Ring Guarantee</span>
+      </div>
+      <p class="card-pitch">Vehicle service contracts and F&amp;I products built for the independent dealer — with a Dealer Services team that picks up the phone and a Three-Ring Guarantee that means your call gets answered, not transferred. BBB A+ accredited, backed by an A-rated insurer. If you're evaluating your VSC provider, they're worth a stop.</p>
+      <div class="card-booth">
+        <strong>Booth 622 &nbsp;·&nbsp; NIADA 2026, Denver</strong><br>
+        800-442-7116
+      </div>
+      <a href="https://asc-niada-2026.vercel.app" target="_blank" rel="noopener" class="card-cta">Visit ASC's Show Page →</a>
+    </div>
+
+    <!-- FLOORPLAN XPRESS -->
+    <div class="partner-card fx">
+      <div class="card-year">Roots Since 1974 &nbsp;·&nbsp; 52 Years</div>
+      <div class="card-name">Floorplan Xpress</div>
+      <div class="card-tags">
+        <span class="card-tag">Floor Plan Financing</span>
+        <span class="card-tag">Local Reps</span>
+        <span class="card-tag">Market Insights</span>
+      </div>
+      <p class="card-pitch">Floor plan financing for independent dealers — with local reps in your market, not a call center. Account managers and an OSS team who know your floor plan by name, plus Market Insights data to help you stock smarter. If you're evaluating your floor plan provider, Booth 533 is worth the walk.</p>
+      <div class="card-booth">
+        <strong>Booth 533 &nbsp;·&nbsp; NIADA 2026, Denver</strong>
+      </div>
+      <a href="https://fx-niada-2026.vercel.app" target="_blank" rel="noopener" class="card-cta">Visit FX's Show Page →</a>
+    </div>
+
+  </div>
+
+  <!-- FORM -->
+  <section class="form-section">
+    <div class="form-inner">
+      <span class="form-label">Connect</span>
+      <h2 class="form-heading">Want an introduction?</h2>
+      <p class="form-sub">Tell us who you'd like to connect with and we'll make sure the right person follows up.</p>
+      <!-- honeypot -->
+      <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off">
+      <div class="form-row">
+        <input type="text" id="f-first" class="form-field" placeholder="First name" autocomplete="given-name">
+        <input type="text" id="f-last" class="form-field" placeholder="Last name" autocomplete="family-name">
+      </div>
+      <div class="form-row">
+        <input type="email" id="f-email" class="form-field" placeholder="Email address" autocomplete="email">
+        <input type="tel" id="f-phone" class="form-field" placeholder="Phone number" autocomplete="tel">
+      </div>
+      <div class="form-full">
+        <input type="text" id="f-dealer" class="form-field" placeholder="Dealership name">
+      </div>
+      <div class="form-full">
+        <select id="f-interest" class="form-field">
+          <option value="" disabled selected>Who are you most interested in connecting with?</option>
+          <option value="ASC Warranty">ASC Warranty — Service Contracts</option>
+          <option value="Floorplan Xpress">Floorplan Xpress — Floor Plan Financing</option>
+          <option value="Both">Both partners</option>
+          <option value="Ashton Agency">Ashton Agency — Bonds &amp; Insurance</option>
+        </select>
+      </div>
+      <button class="btn-submit" id="submitBtn" onclick="submitForm()">Send My Info</button>
+      <div class="form-success" id="formSuccess">
+        <p><strong>Got it.</strong> We'll make sure the right people follow up with you. Find us walking the floor if you'd like to connect in person.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <div class="disclaimer-section">
+    <p>Floorplan Xpress, ASC Warranty, and Ashton Agency are each independently owned and operated companies. Each sets its own policies, makes its own business decisions, and is solely responsible for its own customer relationships. Their presence together on this page reflects a shared commitment to serving independent dealers — not shared management or financial affiliation.</p>
+  </div>
+
+  <footer style="background:#111827;padding:20px 16px;text-align:center;">
+    <div style="max-width:var(--max-width);margin:0 auto;">
+      <p style="font-size:0.72rem;color:rgba(255,255,255,0.3);margin:0;">
+        &copy; Ashton Agency, Inc. &nbsp;·&nbsp; 7051 University Blvd., Winter Park, FL 32792
+        &nbsp;·&nbsp;
+        <a href="https://bonds.ashtonagency.com" style="color:rgba(255,255,255,0.35);">bonds.ashtonagency.com</a>
+      </p>
+    </div>
+  </footer>
+
+</div><!-- /.page-wrapper -->
+
+<script src="js/app.js"></script>
+<script src="js/contact-modal.js"></script>
+<script>
+const _pageLoad = Date.now();
+
+async function submitForm() {
+  const hp       = document.querySelector('input[name="website"]').value;
+  const elapsed  = Date.now() - _pageLoad;
+  const first    = document.getElementById('f-first').value.trim();
+  const last     = document.getElementById('f-last').value.trim();
+  const email    = document.getElementById('f-email').value.trim();
+  const phone    = document.getElementById('f-phone').value.trim();
+  const dealer   = document.getElementById('f-dealer').value.trim();
+  const interest = document.getElementById('f-interest').value;
+
+  if (!email && !phone) {
+    alert('Please enter your email or phone number.');
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  btn.disabled = true;
+
+  try {
+    await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        firstName: first, lastName: last,
+        email, phone, dealership: dealer,
+        showName: 'NIADA 2026 Partners' + (interest ? ' — ' + interest : ''),
+        showTag: 'source-show-niada-2026',
+        _hp: hp, _t: elapsed
+      })
+    });
+  } catch(e) {}
+
+  document.getElementById('formSuccess').style.display = 'block';
+  document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+</script>
+</body>
+</html>

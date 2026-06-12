@@ -16,6 +16,9 @@
   if (modalBody) {
     modalBody.innerHTML =
       '<form id="ashton-contact-form" novalidate>' +
+        '<div style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">' +
+          '<input id="ac-website" name="website" type="text" tabindex="-1" autocomplete="off">' +
+        '</div>' +
         '<div class="form-row" style="margin-bottom:0">' +
           '<div class="form-group">' +
             '<label class="form-label" for="ac-first">First name *</label>' +
@@ -100,6 +103,7 @@
 
   // ── Modal open / close ─────────────────────────────────────────
   function openModal() {
+    window._ashtonModalOpenTime = Date.now();
     var form = document.getElementById('ashton-contact-form');
     var success = document.getElementById('ac-success');
     var error = document.getElementById('ac-error');
@@ -163,6 +167,8 @@
       showName:   SHOW_NAME_VAL,
       showTag:    SHOW_TAG,
       queuedAt:   Date.now(),
+      _hp:        form.website ? form.website.value : '',
+      _t:         window._ashtonModalOpenTime ? Date.now() - window._ashtonModalOpenTime : 9999,
     };
 
     // Save to queue immediately — this is the offline safety net

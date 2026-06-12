@@ -3,7 +3,17 @@ module.exports = async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { firstName, lastName, phone, email, dealership, state, showName, showTag } = req.body || {};
+  const { firstName, lastName, phone, email, dealership, state, showName, showTag, _hp, _t } = req.body || {};
+
+  // Honeypot — bots fill hidden fields, humans never see them
+  if (_hp) {
+    return res.status(200).json({ ok: true });
+  }
+
+  // Time check — bots submit instantly, real users take at least 3 seconds
+  if (typeof _t === 'number' && _t < 3000) {
+    return res.status(200).json({ ok: true });
+  }
 
   if (!email && !phone) {
     return res.status(400).json({ error: 'Email or phone required' });
